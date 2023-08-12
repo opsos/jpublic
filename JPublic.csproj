@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Platforms>AnyCPU</Platforms>
+        <AlgoType>Indicator</AlgoType>
+        <AssemblyName>JPublic</AssemblyName>
+        <RootNamespace>JPublicIndicators</RootNamespace>
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>None</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <OutputPath>D:\Quantower\TradingPlatform\v1.134.5\..\..\Settings\Scripts\Indicators\JPublic</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <OutputPath>D:\Quantower\TradingPlatform\v1.134.5\..\..\Settings\Scripts\Indicators\JPublic</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="TradingPlatform.BusinessLayer">
+            <HintPath>D:\Quantower\TradingPlatform\v1.134.5\bin\TradingPlatform.BusinessLayer.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="TradingPlatform.BusinessLayer">
+            <HintPath>D:\Quantower\TradingPlatform\v1.134.5\bin\BufferedProcessor.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    </ItemGroup>
+</Project>
